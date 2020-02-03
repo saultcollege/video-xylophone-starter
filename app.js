@@ -13,6 +13,15 @@ function threshold(n) {
 }
 
 function init() {
+
+    let i = 0;
+    for ( const k of keyElements ) {
+        const n = i;
+        k.addEventListener('click', () => { 
+            audioElements[n].play(); 
+        });
+        ++i;
+    }
 }
 
 window.addEventListener('load', init);
